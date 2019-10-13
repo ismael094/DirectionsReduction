@@ -19,7 +19,8 @@ public class DirectionReduction_ {
     public static Object[][] cases() {
         return new Object[][]{
                 {new String[]{"NORTH"}, new String[]{"NORTH"}},
-                {new String[]{"WEST"}, new String[]{"WEST"}}
+                {new String[]{"WEST"}, new String[]{"WEST"}},
+                {new String[]{"WEST", "WEST"}, new String[]{"WEST", "WEST"}}
         };
     }
 
@@ -29,6 +30,6 @@ public class DirectionReduction_ {
     }
 
     private String[] reduceDirectionOf(String[] directions) {
-        return new String[]{directions[0]};
+        return directions.clone();
     }
 }
