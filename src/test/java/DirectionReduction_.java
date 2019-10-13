@@ -18,6 +18,7 @@ public class DirectionReduction_ {
     @Parameterized.Parameters
     public static Object[][] cases() {
         return new Object[][]{
+                {new String[]{}, new String[]{}},
                 {new String[]{"NORTH"}, new String[]{"NORTH"}},
                 {new String[]{"WEST"}, new String[]{"WEST"}},
                 {new String[]{"WEST", "WEST"}, new String[]{"WEST", "WEST"}}
@@ -30,6 +31,9 @@ public class DirectionReduction_ {
     }
 
     private String[] reduceDirectionOf(String[] directions) {
+        if (directions.length == 0) return new String[]{};
         return directions.clone();
     }
+
+
 }
